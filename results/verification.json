@@ -1,0 +1,302 @@
+{
+  "benchmark": {
+    "environment": {
+      "git": "git version 2.43.0",
+      "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+      "python": "3.12.3"
+    },
+    "identical_repeated_outputs": true,
+    "measured_at_utc": "2026-09-29T04:45:35.955094+00:00",
+    "method": "Three fresh CLI subprocesses per fixture, sequential, warm OS cache possible. perf_counter elapsed includes process launch. Linux wait4 ru_maxrss reports peak RSS for the command process and reaped children (maximum, not summed concurrent process-tree RSS). Each CLI has socket/connect syscalls denied by seccomp. These small fixtures do not estimate large-repository performance.",
+    "runs": [
+      {
+        "counts": {
+          "manifests": 21,
+          "total_bytes": 2054,
+          "tree_entries": 40
+        },
+        "declaration_events": 21,
+        "elapsed_seconds": 0.6918530717957765,
+        "files": {
+          "SHA256SUMS": {
+            "bytes": 155,
+            "sha256": "8b1c685304e63e94ff83d85ce8c070b2cefa952d0b483b2d5e72c501ffa445c9"
+          },
+          "index.html": {
+            "bytes": 52381,
+            "sha256": "614775330acb0aa460371024b9d60e8c70ceadc4a16fc848ef8911f2b93d857c"
+          },
+          "report.json": {
+            "bytes": 40630,
+            "sha256": "41c307e7dfa10e9bb322da78bbd570a4208afd9a2718880f2c051e9aff999fb3"
+          }
+        },
+        "fixture": "synthetic-seed-42",
+        "peak_rss_kib": 21632,
+        "repeat": 0,
+        "selected_commits": [
+          "fa6ceaebe7895853d198a96ccc3e06e97ffb8bc5",
+          "ae149510538a9a4660f15edaac706476b0ea649f",
+          "baa1c82a6fc0939d5a036162ceb116dcca9618f1",
+          "b9005f9662a478ba6e9ae9508e796c53aa4a1533",
+          "52875b2ea2182e3559f86643e87dc713a8232953",
+          "b9005f9662a478ba6e9ae9508e796c53aa4a1533",
+          "b9005f9662a478ba6e9ae9508e796c53aa4a1533"
+        ],
+        "snapshots": 7
+      },
+      {
+        "counts": {
+          "manifests": 21,
+          "total_bytes": 2054,
+          "tree_entries": 40
+        },
+        "declaration_events": 21,
+        "elapsed_seconds": 0.566824110923335,
+        "files": {
+          "SHA256SUMS": {
+            "bytes": 155,
+            "sha256": "8b1c685304e63e94ff83d85ce8c070b2cefa952d0b483b2d5e72c501ffa445c9"
+          },
+          "index.html": {
+            "bytes": 52381,
+            "sha256": "614775330acb0aa460371024b9d60e8c70ceadc4a16fc848ef8911f2b93d857c"
+          },
+          "report.json": {
+            "bytes": 40630,
+            "sha256": "41c307e7dfa10e9bb322da78bbd570a4208afd9a2718880f2c051e9aff999fb3"
+          }
+        },
+        "fixture": "synthetic-seed-42",
+        "peak_rss_kib": 21632,
+        "repeat": 1,
+        "selected_commits": [
+          "fa6ceaebe7895853d198a96ccc3e06e97ffb8bc5",
+          "ae149510538a9a4660f15edaac706476b0ea649f",
+          "baa1c82a6fc0939d5a036162ceb116dcca9618f1",
+          "b9005f9662a478ba6e9ae9508e796c53aa4a1533",
+          "52875b2ea2182e3559f86643e87dc713a8232953",
+          "b9005f9662a478ba6e9ae9508e796c53aa4a1533",
+          "b9005f9662a478ba6e9ae9508e796c53aa4a1533"
+        ],
+        "snapshots": 7
+      },
+      {
+        "counts": {
+          "manifests": 21,
+          "total_bytes": 2054,
+          "tree_entries": 40
+        },
+        "declaration_events": 21,
+        "elapsed_seconds": 0.6267676129937172,
+        "files": {
+          "SHA256SUMS": {
+            "bytes": 155,
+            "sha256": "8b1c685304e63e94ff83d85ce8c070b2cefa952d0b483b2d5e72c501ffa445c9"
+          },
+          "index.html": {
+            "bytes": 52381,
+            "sha256": "614775330acb0aa460371024b9d60e8c70ceadc4a16fc848ef8911f2b93d857c"
+          },
+          "report.json": {
+            "bytes": 40630,
+            "sha256": "41c307e7dfa10e9bb322da78bbd570a4208afd9a2718880f2c051e9aff999fb3"
+          }
+        },
+        "fixture": "synthetic-seed-42",
+        "peak_rss_kib": 21760,
+        "repeat": 2,
+        "selected_commits": [
+          "fa6ceaebe7895853d198a96ccc3e06e97ffb8bc5",
+          "ae149510538a9a4660f15edaac706476b0ea649f",
+          "baa1c82a6fc0939d5a036162ceb116dcca9618f1",
+          "b9005f9662a478ba6e9ae9508e796c53aa4a1533",
+          "52875b2ea2182e3559f86643e87dc713a8232953",
+          "b9005f9662a478ba6e9ae9508e796c53aa4a1533",
+          "b9005f9662a478ba6e9ae9508e796c53aa4a1533"
+        ],
+        "snapshots": 7
+      },
+      {
+        "counts": {
+          "manifests": 6,
+          "total_bytes": 15923,
+          "tree_entries": 21
+        },
+        "declaration_events": 58,
+        "elapsed_seconds": 0.5644198539666831,
+        "files": {
+          "SHA256SUMS": {
+            "bytes": 155,
+            "sha256": "205bc476b31e322dd5b366b10a771a25c905de30435ba044eaf88477e744cd5d"
+          },
+          "index.html": {
+            "bytes": 95333,
+            "sha256": "f8401435372e1a48a5d9e056f729845eb4eabbb8733ef105fddb42a7652ae079"
+          },
+          "report.json": {
+            "bytes": 83392,
+            "sha256": "eedf793fd4c7a2a2a82c8459c90faaa5e7c82f0835838c2ab039009c2e7fdb62"
+          }
+        },
+        "fixture": "public-manifest-projection",
+        "peak_rss_kib": 22144,
+        "repeat": 0,
+        "selected_commits": [
+          "09e56d3d835bac80dce108058fba9f19c684a0b3",
+          "b1d2160088028e77ee7aac4132bb13e601072449",
+          "c20c78e6d218e35f3cae9ee6b877271ec1ddec38",
+          "44cf27b6df9e2d28c51c9acd48635f6d6bef817b"
+        ],
+        "snapshots": 4
+      },
+      {
+        "counts": {
+          "manifests": 6,
+          "total_bytes": 15923,
+          "tree_entries": 21
+        },
+        "declaration_events": 58,
+        "elapsed_seconds": 0.4604633341077715,
+        "files": {
+          "SHA256SUMS": {
+            "bytes": 155,
+            "sha256": "205bc476b31e322dd5b366b10a771a25c905de30435ba044eaf88477e744cd5d"
+          },
+          "index.html": {
+            "bytes": 95333,
+            "sha256": "f8401435372e1a48a5d9e056f729845eb4eabbb8733ef105fddb42a7652ae079"
+          },
+          "report.json": {
+            "bytes": 83392,
+            "sha256": "eedf793fd4c7a2a2a82c8459c90faaa5e7c82f0835838c2ab039009c2e7fdb62"
+          }
+        },
+        "fixture": "public-manifest-projection",
+        "peak_rss_kib": 22144,
+        "repeat": 1,
+        "selected_commits": [
+          "09e56d3d835bac80dce108058fba9f19c684a0b3",
+          "b1d2160088028e77ee7aac4132bb13e601072449",
+          "c20c78e6d218e35f3cae9ee6b877271ec1ddec38",
+          "44cf27b6df9e2d28c51c9acd48635f6d6bef817b"
+        ],
+        "snapshots": 4
+      },
+      {
+        "counts": {
+          "manifests": 6,
+          "total_bytes": 15923,
+          "tree_entries": 21
+        },
+        "declaration_events": 58,
+        "elapsed_seconds": 0.434541153954342,
+        "files": {
+          "SHA256SUMS": {
+            "bytes": 155,
+            "sha256": "205bc476b31e322dd5b366b10a771a25c905de30435ba044eaf88477e744cd5d"
+          },
+          "index.html": {
+            "bytes": 95333,
+            "sha256": "f8401435372e1a48a5d9e056f729845eb4eabbb8733ef105fddb42a7652ae079"
+          },
+          "report.json": {
+            "bytes": 83392,
+            "sha256": "eedf793fd4c7a2a2a82c8459c90faaa5e7c82f0835838c2ab039009c2e7fdb62"
+          }
+        },
+        "fixture": "public-manifest-projection",
+        "peak_rss_kib": 22272,
+        "repeat": 2,
+        "selected_commits": [
+          "09e56d3d835bac80dce108058fba9f19c684a0b3",
+          "b1d2160088028e77ee7aac4132bb13e601072449",
+          "c20c78e6d218e35f3cae9ee6b877271ec1ddec38",
+          "44cf27b6df9e2d28c51c9acd48635f6d6bef817b"
+        ],
+        "snapshots": 4
+      }
+    ],
+    "schema_version": "local-benchmark/1"
+  },
+  "browser": {
+    "browser": "134.0.6998.35",
+    "checks": [
+      "snapshot navigation",
+      "baseline",
+      "ecosystem/category/search/change filters",
+      "before/after and commit provenance",
+      "keyboard arrows, slash, Escape, Tab, Enter, Space",
+      "coverage warnings",
+      "pagination",
+      "hostile text inert",
+      "mobile overflow",
+      "zero external requests"
+    ],
+    "external_requests": 0,
+    "network": "offline context, all requests routed to abort, CSP blocks connections",
+    "page_errors": 0,
+    "status": "passed"
+  },
+  "publication": {
+    "bytes": 322361,
+    "files": 64
+  },
+  "schema_version": "verification/1",
+  "started_at_utc": "2026-09-29T04:43:50.165503+00:00",
+  "status": "passed",
+  "steps": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "scripts/offline_exec.py",
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "elapsed_seconds": 105.55659949406981,
+      "name": "Unit, safety, independent oracle, and installed CLI tests (network syscalls denied)",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "scripts/offline_exec.py",
+        "/usr/bin/python3",
+        "scripts/benchmark.py",
+        "--output",
+        "/tmp/repo-stack-verify-xmmtezdx/benchmark.json"
+      ],
+      "elapsed_seconds": 3.9952314300462604,
+      "name": "Public fixture integrity and reproducible CLI benchmark",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "scripts/offline_exec.py",
+        "/usr/bin/python3",
+        "scripts/demo.py",
+        "/tmp/repo-stack-verify-xmmtezdx/browser",
+        "--hostile"
+      ],
+      "elapsed_seconds": 0.9292881938163191,
+      "name": "Create hostile-text browser fixture",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "node",
+        "tests/browser.cjs",
+        "/tmp/repo-stack-verify-xmmtezdx/browser/report/index.html"
+      ],
+      "elapsed_seconds": 3.7838968399446458,
+      "name": "Network-blocked Chromium navigation, filters, keyboard, and hostile text",
+      "returncode": 0
+    }
+  ]
+}

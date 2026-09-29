@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="@@CSP@@">
+<title>Repository stack timeline</title>
+<style>@@STYLE@@</style>
+</head>
+<body>
+<header><p class="eyebrow">REPOSITORY STACK TIMELINE · DECLARATIONS / 1</p><h1>What changed in the stack?</h1><p>Explore declared dependencies across selected Git snapshots. These are declarations, not installed versions, actual usage, or adoption dates.</p></header>
+<main>
+<section aria-label="Snapshot navigation" class="panel">
+<div class="navigation"><button id="previous" aria-label="Previous snapshot">← Previous</button><label>Selected snapshot <select id="snapshot"></select></label><button id="next" aria-label="Next snapshot">Next →</button></div>
+<p id="provenance" class="mono"></p><p id="ancestry"></p>
+</section>
+<section class="panel" aria-label="Dependency filters">
+<div class="filters">
+<label>View <select id="view"><option value="changes">Changes from previous selection</option><option value="snapshot">All declarations in snapshot</option></select></label>
+<label>Search <input id="search" type="search" placeholder="Name, path, or declaration…" autocomplete="off"></label>
+<label>Ecosystem <select id="ecosystem"><option value="">All ecosystems</option><option value="npm">npm</option><option value="python">Python</option></select></label>
+<label>Category <select id="category"><option value="">All categories</option></select></label>
+<label>Change <select id="kind"><option value="">All changes</option><option>added</option><option>absent</option><option>changed</option><option>unknown</option></select></label>
+<button id="reset">Reset filters</button>
+</div>
+<p class="help">Keyboard: ← / → select snapshots outside form controls; / focuses search; Escape clears search. Tab navigates controls and evidence; Enter or Space opens an evidence row.</p>
+</section>
+<section id="warnings" class="panel" aria-label="Coverage warnings"></section>
+<section class="panel" aria-label="Dependency declarations">
+<p id="summary" role="status" aria-live="polite"></p>
+<div id="rows"></div>
+<div class="navigation"><button id="page-back">Previous page</button><span id="page-status"></span><button id="page-next">Next page</button></div>
+</section>
+</main>
+<footer>No external resources or network requests. All values come from committed manifests. JSON schema: repo-stack-timeline/1. <a href="report.json">Open evidence JSON</a>.</footer>
+<script id="report-data" type="application/json">@@DATA@@</script>
+<script>@@SCRIPT@@</script>
+</body></html>

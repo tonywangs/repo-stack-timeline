@@ -1,0 +1,45 @@
+test_duplicate_requirements_and_extra_collisions (test_extract.ExtractionTests.test_duplicate_requirements_and_extra_collisions) ... ok
+test_dynamic_does_not_claim_absence (test_extract.ExtractionTests.test_dynamic_does_not_claim_absence) ... ok
+test_empty_missing_and_invalid_sections (test_extract.ExtractionTests.test_empty_missing_and_invalid_sections) ... ok
+test_formatting_and_array_order_do_not_change_declarations (test_extract.ExtractionTests.test_formatting_and_array_order_do_not_change_declarations) ... ok
+test_incomplete_category_cannot_claim_a_known_change (test_extract.ExtractionTests.test_incomplete_category_cannot_claim_a_known_change) ... ok
+test_malformed_and_unsupported (test_extract.ExtractionTests.test_malformed_and_unsupported) ... ok
+test_npm_all_categories_opaque_constraints (test_extract.ExtractionTests.test_npm_all_categories_opaque_constraints) ... ok
+test_python_details_and_duplicate_marker_requirements (test_extract.ExtractionTests.test_python_details_and_duplicate_marker_requirements) ... ok
+test_symlink_and_hostile_text (test_extract.ExtractionTests.test_symlink_and_hostile_text) ... ok
+test_deterministic_wheel_and_isolated_offline_installed_cli (test_install.InstallationTests.test_deterministic_wheel_and_isolated_offline_installed_cli) ... ok
+test_seeded_histories (test_oracle.OracleTests.test_seeded_histories) ... ok
+test_all_resource_limits (test_safety.SafetyTests.test_all_resource_limits) ... ok
+test_alternates_and_gitfile_rejected (test_safety.SafetyTests.test_alternates_and_gitfile_rejected) ... ok
+test_bare_sha256_and_non_utf8_paths (test_safety.SafetyTests.test_bare_sha256_and_non_utf8_paths) ... ok
+test_cli_output_cannot_modify_repository (test_safety.SafetyTests.test_cli_output_cannot_modify_repository) ... ok
+test_cli_signal_cancellation_leaves_no_output (test_safety.SafetyTests.test_cli_signal_cancellation_leaves_no_output) ... ok
+test_identical_reports_and_atomic_collision (test_safety.SafetyTests.test_identical_reports_and_atomic_collision) ... ok
+test_interrupted_writes_and_serialization_failures (test_safety.SafetyTests.test_interrupted_writes_and_serialization_failures) ... ok
+test_missing_object_and_parent (test_safety.SafetyTests.test_missing_object_and_parent) ... ok
+test_packed_objects_and_replacement_refs (test_safety.SafetyTests.test_packed_objects_and_replacement_refs) ... ok
+test_repository_entire_state_unchanged_and_config_not_executed (test_safety.SafetyTests.test_repository_entire_state_unchanged_and_config_not_executed) ... ok
+test_runner_timeout_output_limit_and_process_group_cleanup (test_safety.SafetyTests.test_runner_timeout_output_limit_and_process_group_cleanup) ... ok
+test_symlinks_and_submodules_not_followed (test_safety.SafetyTests.test_symlinks_and_submodules_not_followed) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 105.217s
+
+OK
+ORACLE: 200 seeds, 1400 snapshots, 1200 adjacent comparisons checked independently
+{"status": "passed", "runs": 6, "identical_repeated_outputs": true}
+{
+  "repository": "/tmp/repo-stack-verify-xmmtezdx/browser/repository",
+  "commits": [
+    "fa6ceaebe7895853d198a96ccc3e06e97ffb8bc5",
+    "ae149510538a9a4660f15edaac706476b0ea649f",
+    "baa1c82a6fc0939d5a036162ceb116dcca9618f1",
+    "b9005f9662a478ba6e9ae9508e796c53aa4a1533",
+    "52875b2ea2182e3559f86643e87dc713a8232953",
+    "b9005f9662a478ba6e9ae9508e796c53aa4a1533",
+    "b9005f9662a478ba6e9ae9508e796c53aa4a1533",
+    "31c1909147b1a24a4a8aa26c31693ef850fd3e6b"
+  ],
+  "report": "/tmp/repo-stack-verify-xmmtezdx/browser/report/index.html"
+}
+{"status":"passed","browser":"134.0.6998.35","network":"offline context, all requests routed to abort, CSP blocks connections","external_requests":0,"page_errors":0,"checks":["snapshot navigation","baseline","ecosystem/category/search/change filters","before/after and commit provenance","keyboard arrows, slash, Escape, Tab, Enter, Space","coverage warnings","pagination","hostile text inert","mobile overflow","zero external requests"]}

@@ -1,0 +1,15 @@
+[build-system]
+requires = []
+build-backend = "wheel_backend"
+backend-path = ["scripts"]
+
+[project]
+name = "repo-stack-timeline"
+version = "1.0.0"
+description = "Offline declared dependency history for explicitly selected Git snapshots"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = []
+
+[project.scripts]
+repo-stack-timeline = "repo_stack_timeline.cli:main"
