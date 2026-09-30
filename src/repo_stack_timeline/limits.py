@@ -6,6 +6,9 @@ from .errors import TimelineError
 
 @dataclass(frozen=True)
 class Limits:
+    lockfile_bytes: int = 4_194_304
+    package_entries: int = 100_000
+    lockfile_work: int = 1_000_000
     tree_entries: int = 100_000
     manifests: int = 2_000
     blob_bytes: int = 1_048_576

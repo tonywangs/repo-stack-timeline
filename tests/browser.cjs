@@ -23,6 +23,7 @@ const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
     page.on('request',r => {if (/^https?:/.test(r.url()))attemptedNetwork.push(r.url());});
     await page.goto(pathToFileURL(artifact).href);
     await page.waitForFunction(() => document.querySelector('#summary').textContent.length>0);
+    assert.equal(await page.locator('#analysis-label').isVisible(),false);
     assert.match(await page.locator('#rows').innerText(),/Baseline selected/);
     assert.equal(await page.locator('#previous').isDisabled(),true);
     await page.locator('#view').selectOption('snapshot');

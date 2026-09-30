@@ -41,3 +41,20 @@ class InstallationTests(unittest.TestCase):
             self.assertEqual({x['kind'] for x in report['comparisons'][0]['events']},{'added','changed'})
             location=subprocess.check_output([str(root/'env/bin/python'),'-I','-c','import repo_stack_timeline;print(repo_stack_timeline.__file__)'],cwd=cwd,text=True)
             self.assertTrue(location.strip().startswith(str(root/'env')))
+
+    def test_installed_lockfile_analysis(self):
+        from lockfile_demo import create
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); executable=install(root/'env')
+            repo,ids=create(root/'fixture',size=10)
+            state=file_state(repo.root)
+            for label in ['first','second']:
+                run=subprocess.run([sys.executable,str(ROOT/'scripts/offline_exec.py'),str(executable),str(repo.root),*ids,'--lockfiles','--output',str(root/label)],cwd=root,capture_output=True)
+                self.assertEqual(run.returncode,0,run.stderr)
+            self.assertEqual(file_state(root/'first'),file_state(root/'second'))
+            self.assertEqual(file_state(repo.root),state)
+            import json
+            report=json.loads((root/'first/report.json').read_text())
+            self.assertEqual(report['schema_version'],'repo-stack-timeline/2')
+            self.assertEqual({e['kind'] for e in report['comparisons'][0]['lockfile_events']},{'added','absent','changed'})
+            self.assertEqual(report['comparisons'][1]['lockfile_status'],'incomplete')

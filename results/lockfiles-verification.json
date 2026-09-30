@@ -1,0 +1,226 @@
+{
+  "benchmark": {
+    "identical_repeated_reports": true,
+    "input_repository_unchanged": true,
+    "method": "Three sequential fresh CLI subprocesses; Linux wait4 ru_maxrss is command/reaped-child peak, not summed concurrent process-tree RSS. Warm cache possible. Synthetic 220-package workload, three selected snapshots, including one intentionally unsupported file.",
+    "runs": [
+      {
+        "counts": {
+          "lockfile_work": 4253,
+          "manifests": 5,
+          "package_entries": 450,
+          "total_bytes": 44019,
+          "tree_entries": 5
+        },
+        "elapsed_seconds": 0.4525321018882096,
+        "files": {
+          "SHA256SUMS": {
+            "bytes": 155,
+            "sha256": "dea1f91d58b509b226e2da9b03461aa41b64ee1bbc9f747832578f6153825980"
+          },
+          "index.html": {
+            "bytes": 267682,
+            "sha256": "f1f4f6e7b40f1a6e97f1223163cb4ecdc0a5dea814e4a1455249c834c33e8181"
+          },
+          "report.json": {
+            "bytes": 253982,
+            "sha256": "494e649d7130ef8c0ce8dd435b9ee6207b7a95783b00aaab7617c4f1bc5b6888"
+          }
+        },
+        "lockfile_events": 228,
+        "peak_rss_kib": 23596,
+        "repeat": 0
+      },
+      {
+        "counts": {
+          "lockfile_work": 4253,
+          "manifests": 5,
+          "package_entries": 450,
+          "total_bytes": 44019,
+          "tree_entries": 5
+        },
+        "elapsed_seconds": 0.4032336324453354,
+        "files": {
+          "SHA256SUMS": {
+            "bytes": 155,
+            "sha256": "dea1f91d58b509b226e2da9b03461aa41b64ee1bbc9f747832578f6153825980"
+          },
+          "index.html": {
+            "bytes": 267682,
+            "sha256": "f1f4f6e7b40f1a6e97f1223163cb4ecdc0a5dea814e4a1455249c834c33e8181"
+          },
+          "report.json": {
+            "bytes": 253982,
+            "sha256": "494e649d7130ef8c0ce8dd435b9ee6207b7a95783b00aaab7617c4f1bc5b6888"
+          }
+        },
+        "lockfile_events": 228,
+        "peak_rss_kib": 23600,
+        "repeat": 1
+      },
+      {
+        "counts": {
+          "lockfile_work": 4253,
+          "manifests": 5,
+          "package_entries": 450,
+          "total_bytes": 44019,
+          "tree_entries": 5
+        },
+        "elapsed_seconds": 0.46107223676517606,
+        "files": {
+          "SHA256SUMS": {
+            "bytes": 155,
+            "sha256": "dea1f91d58b509b226e2da9b03461aa41b64ee1bbc9f747832578f6153825980"
+          },
+          "index.html": {
+            "bytes": 267682,
+            "sha256": "f1f4f6e7b40f1a6e97f1223163cb4ecdc0a5dea814e4a1455249c834c33e8181"
+          },
+          "report.json": {
+            "bytes": 253982,
+            "sha256": "494e649d7130ef8c0ce8dd435b9ee6207b7a95783b00aaab7617c4f1bc5b6888"
+          }
+        },
+        "lockfile_events": 228,
+        "peak_rss_kib": 23596,
+        "repeat": 2
+      }
+    ],
+    "selected_commits": [
+      "e7b8ef34f8d4c1dcc989aa532abccc25058fcf04",
+      "46adc376d427aff08f643bc7e53ba744c529f938",
+      "faec71bdda03f740d1d1f6e46f864eb7a7782c37"
+    ]
+  },
+  "browser": {
+    "browser": "145.0.7632.6",
+    "checks": [
+      "lockfile/declaration switch",
+      "snapshot/change filters",
+      "location and alias search",
+      "before/after metadata and provenance",
+      "pagination",
+      "keyboard Enter Space Escape arrows",
+      "incomplete analysis",
+      "hostile strings inert",
+      "mobile layout"
+    ],
+    "external_requests": 0,
+    "page_errors": 0,
+    "status": "passed"
+  },
+  "environment": {
+    "git": "git version 2.43.0",
+    "node": "v24.20.0",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "publication": {
+    "bytes": 427625,
+    "files": 85
+  },
+  "reader": {
+    "compared_records": 62,
+    "comparisons": [
+      {
+        "diagnostics": [],
+        "fixture": "workspaces-simple-virtual/package-lock.json",
+        "records": 5,
+        "status": "agree"
+      },
+      {
+        "diagnostics": [],
+        "fixture": "synthetic-v3:workspaces-simple-virtual/package-lock.json",
+        "records": 5,
+        "status": "agree"
+      },
+      {
+        "diagnostics": [],
+        "fixture": "workspaces-conflicting-versions-virtual/package-lock.json",
+        "records": 8,
+        "status": "agree"
+      },
+      {
+        "diagnostics": [],
+        "fixture": "synthetic-v3:workspaces-conflicting-versions-virtual/package-lock.json",
+        "records": 8,
+        "status": "agree"
+      },
+      {
+        "diagnostics": [],
+        "fixture": "testing-peer-deps-nested/package-lock.json",
+        "records": 9,
+        "status": "agree"
+      },
+      {
+        "diagnostics": [],
+        "fixture": "synthetic-v3:testing-peer-deps-nested/package-lock.json",
+        "records": 9,
+        "status": "agree"
+      },
+      {
+        "diagnostics": [],
+        "fixture": "external-link-dep/package-lock.json",
+        "records": 6,
+        "status": "agree"
+      },
+      {
+        "diagnostics": [],
+        "fixture": "synthetic-v3:external-link-dep/package-lock.json",
+        "records": 6,
+        "status": "agree"
+      },
+      {
+        "diagnostics": [],
+        "fixture": "engine-specification/package-lock.json",
+        "records": 3,
+        "status": "agree"
+      },
+      {
+        "diagnostics": [],
+        "fixture": "synthetic-v3:engine-specification/package-lock.json",
+        "records": 3,
+        "status": "agree"
+      },
+      {
+        "fixture": "install-types/package-lock.json",
+        "reader_entries": 34,
+        "reason": "v1 intentionally unsupported; Arborist converts legacy records",
+        "status": "expected_scope_difference"
+      }
+    ],
+    "name": "@npmcli/arborist",
+    "source_sha256": "1c00ae180692a9bebe977c183c6db02c50b3c2e293867600c376b6d5f0773716",
+    "supported_files": 10,
+    "synthetic_v3_files": 5,
+    "unexpected_disagreements": 0,
+    "upstream_files": 6,
+    "version": "7.5.4"
+  },
+  "schema_version": "lockfile-verification/1",
+  "started_at_utc": "2026-09-30T18:19:19.888546+00:00",
+  "status": "passed",
+  "steps": [
+    {
+      "elapsed_seconds": 124.92002806579694,
+      "name": "Full regressions, 200 declaration histories, 200 lockfile pairs, installed CLI, baseline browser",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Unit, safety, independent oracle, and installed CLI tests (network syscalls denied)\ntest_duplicate_requirements_and_extra_collisions (test_extract.ExtractionTests.test_duplicate_requirements_and_extra_collisions) ... ok\ntest_dynamic_does_not_claim_absence (test_extract.ExtractionTests.test_dynamic_does_not_claim_absence) ... ok\ntest_empty_missing_and_invalid_sections (test_extract.ExtractionTests.test_empty_missing_and_invalid_sections) ... ok\ntest_formatting_and_array_order_do_not_change_declarations (test_extract.ExtractionTests.test_formatting_and_array_order_do_not_change_declarations) ... ok\ntest_incomplete_category_cannot_claim_a_known_change (test_extract.ExtractionTests.test_incomplete_category_cannot_claim_a_known_change) ... ok\ntest_malformed_and_unsupported (test_extract.ExtractionTests.test_malformed_and_unsupported) ... ok\ntest_npm_all_categories_opaque_constraints (test_extract.ExtractionTests.test_npm_all_categories_opaque_constraints) ... ok\ntest_python_details_and_duplicate_marker_requirements (test_extract.ExtractionTests.test_python_details_and_duplicate_marker_requirements) ... ok\ntest_symlink_and_hostile_text (test_extract.ExtractionTests.test_symlink_and_hostile_text) ... ok\ntest_deterministic_wheel_and_isolated_offline_installed_cli (test_install.InstallationTests.test_deterministic_wheel_and_isolated_offline_installed_cli) ... ok\ntest_installed_lockfile_analysis (test_install.InstallationTests.test_installed_lockfile_analysis) ... ok\ntest_200_seeded_snapshot_pairs (test_lockfiles.LockfileTests.test_200_seeded_snapshot_pairs) ... ok\ntest_incomplete_empty_and_symlink_files (test_lockfiles.LockfileTests.test_incomplete_empty_and_symlink_files) ... ok\ntest_limits_state_paths_and_determinism (test_lockfiles.LockfileTests.test_limits_state_paths_and_determinism) ... ok\ntest_strict_parsing (test_lockfiles.LockfileTests.test_strict_parsing) ... ok\ntest_seeded_histories (test_oracle.OracleTests.test_seeded_histories) ... ok\ntest_all_resource_limits (test_safety.SafetyTests.test_all_resource_limits) ... ok\ntest_alternates_and_gitfile_rejected (test_safety.SafetyTests.test_alternates_and_gitfile_rejected) ... ok\ntest_bare_sha256_and_non_utf8_paths (test_safety.SafetyTests.test_bare_sha256_and_non_utf8_paths) ... ok\ntest_cli_output_cannot_modify_repository (test_safety.SafetyTests.test_cli_output_cannot_modify_repository) ... ok\ntest_cli_signal_cancellation_leaves_no_output (test_safety.SafetyTests.test_cli_signal_cancellation_leaves_no_output) ... ok\ntest_identical_reports_and_atomic_collision (test_safety.SafetyTests.test_identical_reports_and_atomic_collision) ... ok\ntest_interrupted_writes_and_serialization_failures (test_safety.SafetyTests.test_interrupted_writes_and_serialization_failures) ... ok\ntest_missing_object_and_parent (test_safety.SafetyTests.test_missing_object_and_parent) ... ok\ntest_packed_objects_and_replacement_refs (test_safety.SafetyTests.test_packed_objects_and_replacement_refs) ... ok\ntest_repository_entire_state_unchanged_and_config_not_executed (test_safety.SafetyTests.test_repository_entire_state_unchanged_and_config_not_executed) ... ok\ntest_runner_timeout_output_limit_and_process_group_cleanup (test_safety.SafetyTests.test_runner_timeout_output_limit_and_process_group_cleanup) ... ok\ntest_symlinks_and_submodules_not_followed (test_safety.SafetyTests.test_symlinks_and_submodules_not_followed) ... ok\n\n----------------------------------------------------------------------\nRan 28 tests in 116.571s\n\nOK\nLOCKFILE ORACLE: 200 seeds, 400 Git snapshots, 200 pairs, 60 incomplete pairs; independent reference agrees\nORACLE: 200 seeds, 1400 snapshots, 1200 adjacent comparisons checked independently\nPublic fixture integrity and reproducible CLI benchmark\n{\"status\": \"passed\", \"runs\": 6, \"identical_repeated_outputs\": true}\nCreate hostile-text browser fixture\n{\n  \"repository\": \"/tmp/repo-stack-verify-hygpoy7t/browser/repository\",\n  \"commits\": [\n    \"fa6ceaebe7895853d198a96ccc3e06e97ffb8bc5\",\n    \"ae149510538a9a4660f15edaac706476b0ea649f\",\n    \"baa1c82a6fc0939d5a036162ceb116dcca9618f1\",\n    \"b9005f9662a478ba6e9ae9508e796c53aa4a1533\",\n    \"52875b2ea2182e3559f86643e87dc713a8232953\",\n    \"b9005f9662a478ba6e9ae9508e796c53aa4a1533\",\n    \"b9005f9662a478ba6e9ae9508e796c53aa4a1533\",\n    \"31c1909147b1a24a4a8aa26c31693ef850fd3e6b\"\n  ],\n  \"report\": \"/tmp/repo-stack-verify-hygpoy7t/browser/report/index.html\"\n}\nNetwork-blocked Chromium navigation, filters, keyboard, and hostile text\n{\"status\":\"passed\",\"browser\":\"145.0.7632.6\",\"network\":\"offline context, all requests routed to abort, CSP blocks connections\",\"external_requests\":0,\"page_errors\":0,\"checks\":[\"snapshot navigation\",\"baseline\",\"ecosystem/category/search/change filters\",\"before/after and commit provenance\",\"keyboard arrows, slash, Escape, Tab, Enter, Space\",\"coverage warnings\",\"pagination\",\"hostile text inert\",\"mobile overflow\",\"zero external requests\"]}\n{\"status\": \"passed\", \"browser\": \"passed\", \"publication\": {\"files\": 85, \"bytes\": 427625}}\n"
+    },
+    {
+      "elapsed_seconds": 0.30572848208248615,
+      "name": "Pinned Arborist fixture comparison (network syscalls denied)",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "[structured result summarized in reader evidence]"
+    },
+    {
+      "elapsed_seconds": 3.3343998016789556,
+      "name": "Network-blocked Chromium lockfile UI",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"status\":\"passed\",\"browser\":\"145.0.7632.6\",\"external_requests\":0,\"page_errors\":0,\"checks\":[\"lockfile/declaration switch\",\"snapshot/change filters\",\"location and alias search\",\"before/after metadata and provenance\",\"pagination\",\"keyboard Enter Space Escape arrows\",\"incomplete analysis\",\"hostile strings inert\",\"mobile layout\"]}\n"
+    }
+  ]
+}

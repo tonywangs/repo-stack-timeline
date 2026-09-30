@@ -148,7 +148,7 @@ class ObjectRepository:
             raise TimelineError('invalid_object', 'Invalid commit tree/parent headers')
         return dict(commit=oid, tree=tree, parents=parents, committer_time=timestamp)
 
-    def manifests(self, tree):
+    def manifests(self, tree, lockfiles=False):
         # Include directories in counts. Git never recurses into gitlinks.
         _, out = self.runner.run(['ls-tree', '-r', '-t', '-z', '--full-tree', tree])
         entries = out.split(b'\0')
@@ -156,6 +156,7 @@ class ObjectRepository:
             raise TimelineError('invalid_object', 'Unterminated tree listing')
         found = []
         skipped = []
+        names = (b'package.json', b'pyproject.toml') + ((b'package-lock.json', b'npm-shrinkwrap.json') if lockfiles else ())
         for entry in entries[:-1]:
             self.budget.consume('tree_entries')
             try:
@@ -165,7 +166,7 @@ class ObjectRepository:
                 raise TimelineError('invalid_object', 'Invalid tree entry') from None
             if kind == b'commit':
                 skipped.append({'code': 'submodule_skipped', 'path': path.decode('utf-8', 'surrogateescape')})
-            if path.rsplit(b'/', 1)[-1] not in (b'package.json', b'pyproject.toml'):
+            if path.rsplit(b'/', 1)[-1] not in names:
                 continue
             self.budget.consume('manifests')
             found.append((path.decode('utf-8', 'surrogateescape'), mode.decode(), kind.decode(), oid.decode()))

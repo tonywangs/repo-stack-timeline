@@ -165,3 +165,8 @@ SIGTERM produces `cancelled` and exit 130. There is no success bundle for an
 exhausted budget. Missing snapshot/tree/blob objects are fatal `git_object_error`;
 missing ancestry alone is explicitly unknown. Git's raw stderr is not copied to
 the report. A successful scan with coverage notices still exits zero.
+
+## Optional lockfile analysis
+
+The exclusions above describe the default declaration projection. `--lockfiles`
+adds [npm-lockfiles/1 semantics](lockfiles.md) under report schema version 2.

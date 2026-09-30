@@ -90,3 +90,10 @@ test remains. The first browser harness also aborted local file navigation; its
 routing rule was corrected to allow local files while blocking all other requests.
 These were observed failures during development, not evidence that the initial
 versions passed.
+
+## Lockfile extension
+
+Historical evidence above remains unchanged. The combined current verification
+uses Playwright 1.58.2 and pinned Arborist 7.5.4; see
+[lockfile verification](lockfile-verification.md) for its single command, exact
+setup, current evidence, and limitations.

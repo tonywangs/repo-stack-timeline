@@ -1,0 +1,63 @@
+{
+  "license": {
+    "sha256": "27d998b503b18cdb16c49e93da04069a99ba8a1d7e18d67146de8e242f9a6d21",
+    "url": "https://raw.githubusercontent.com/npm/cli/dbe7d983d184fb00c85f7b34839a123057029c8b/workspaces/arborist/LICENSE.md"
+  },
+  "schema_version": "lockfile-corpus/1",
+  "sources": [
+    {
+      "bytes": 676,
+      "entries": 5,
+      "lockfile_version": 2,
+      "path": "workspaces-simple-virtual/package-lock.json",
+      "revision": "dbe7d983d184fb00c85f7b34839a123057029c8b",
+      "sha256": "f418229b54204ccfcf8f64401ebe0232166937a01c21150ee4dc009dd8d19db9",
+      "url": "https://raw.githubusercontent.com/npm/cli/dbe7d983d184fb00c85f7b34839a123057029c8b/workspaces/arborist/test/fixtures/workspaces-simple-virtual/package-lock.json"
+    },
+    {
+      "bytes": 2400,
+      "entries": 8,
+      "lockfile_version": 2,
+      "path": "workspaces-conflicting-versions-virtual/package-lock.json",
+      "revision": "dbe7d983d184fb00c85f7b34839a123057029c8b",
+      "sha256": "53bf0988f548ad7816a697ec7bf9f979d24495ed45083ba6d29e119352bd6b60",
+      "url": "https://raw.githubusercontent.com/npm/cli/dbe7d983d184fb00c85f7b34839a123057029c8b/workspaces/arborist/test/fixtures/workspaces-conflicting-versions-virtual/package-lock.json"
+    },
+    {
+      "bytes": 6739,
+      "entries": 9,
+      "lockfile_version": 2,
+      "path": "testing-peer-deps-nested/package-lock.json",
+      "revision": "dbe7d983d184fb00c85f7b34839a123057029c8b",
+      "sha256": "b6ef595df8981a3eda0b0cbf150ba614fb23bc04adcc6ae3ebba0afc70b243ef",
+      "url": "https://raw.githubusercontent.com/npm/cli/dbe7d983d184fb00c85f7b34839a123057029c8b/workspaces/arborist/test/fixtures/testing-peer-deps-nested/package-lock.json"
+    },
+    {
+      "bytes": 1404,
+      "entries": 6,
+      "lockfile_version": 2,
+      "path": "external-link-dep/package-lock.json",
+      "revision": "dbe7d983d184fb00c85f7b34839a123057029c8b",
+      "sha256": "6b8c3ec319734fba18b186ace41523d0560cbdd27a30f24db36a0ce0acaa9709",
+      "url": "https://raw.githubusercontent.com/npm/cli/dbe7d983d184fb00c85f7b34839a123057029c8b/workspaces/arborist/test/fixtures/external-link-dep/package-lock.json"
+    },
+    {
+      "bytes": 1385,
+      "entries": 3,
+      "lockfile_version": 2,
+      "path": "engine-specification/package-lock.json",
+      "revision": "dbe7d983d184fb00c85f7b34839a123057029c8b",
+      "sha256": "65cbd693e530836e927149a7539db7e1a412f72a1457b29c7dacdd0c1aaac25c",
+      "url": "https://raw.githubusercontent.com/npm/cli/dbe7d983d184fb00c85f7b34839a123057029c8b/workspaces/arborist/test/fixtures/engine-specification/package-lock.json"
+    },
+    {
+      "bytes": 7320,
+      "entries": 0,
+      "lockfile_version": 1,
+      "path": "install-types/package-lock.json",
+      "revision": "dbe7d983d184fb00c85f7b34839a123057029c8b",
+      "sha256": "7d2438194bae4814855f3122b1f713e594fa4990ec66e9d2c5e9948db7fc319c",
+      "url": "https://raw.githubusercontent.com/npm/cli/dbe7d983d184fb00c85f7b34839a123057029c8b/workspaces/arborist/test/fixtures/install-types/package-lock.json"
+    }
+  ]
+}

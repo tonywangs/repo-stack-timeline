@@ -33,3 +33,8 @@ These are scope comparisons, not measured accuracy or performance rankings. The
 validation baseline here is a generated ground-truth declaration model, not a
 claim that these existing tools are less accurate. Public fixtures are a tiny
 convenience sample and do not support ecosystem-popularity or adoption claims.
+
+## npm lockfile comparison
+
+See [lockfile related work](lockfiles.md#prior-work-and-independent-reader) for the
+primary npm specification and pinned Arborist 7.5.4 independent reader.

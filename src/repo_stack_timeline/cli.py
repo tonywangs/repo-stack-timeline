@@ -15,6 +15,7 @@ def parser():
     p.add_argument('repository', type=Path)
     p.add_argument('commits', nargs='+', help='1–32 hexadecimal commit IDs; order is significant; repeats allowed')
     p.add_argument('--output', required=True, type=Path, help='Fresh output directory outside the source repository; parent must exist')
+    p.add_argument('--lockfiles', action='store_true', help='Include recorded npm lockfile v2/v3 state (schema version 2)')
     p.add_argument('--object-format', choices=['sha1', 'sha256'], default='sha1')
     for field in fields(Limits):
         p.add_argument('--max-' + field.name.replace('_','-'), type=float if field.name == 'seconds' else int, default=field.default)
@@ -36,8 +37,10 @@ def main(argv=None):
         for sig in (signal.SIGINT, signal.SIGTERM, signal.SIGALRM):
             old_handlers[sig] = signal.signal(sig, cancel)
         signal.setitimer(signal.ITIMER_REAL, limits.seconds)
-        report = scan(source, args.commits, limits, args.object_format, budget)
+        report = scan(source, args.commits, limits, args.object_format, budget, lockfiles=args.lockfiles)
         result = publish(report, args.output, budget)
+        if args.lockfiles:
+            result['lockfile_status'] = report['lockfile_status']
         print(json.dumps(dict(status='ok', snapshots=len(report['snapshots']), **result), sort_keys=True))
         return 0
     except TimelineError as error:

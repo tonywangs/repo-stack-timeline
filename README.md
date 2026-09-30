@@ -1,6 +1,7 @@
 # Repository stack timeline
 
-Trace **declared Python and JavaScript dependencies** across explicitly selected
+Trace **declared Python and JavaScript dependencies**, with opt-in **recorded npm
+lockfile state**, across explicitly selected
 Git commits. Generate deterministic JSON evidence and a self-contained HTML
 viewer, without checking out files, running repository code, installing its
 dependencies, or contacting a network service.
@@ -60,6 +61,28 @@ python3 scripts/wheel_backend.py --output /tmp/stack-wheels
 python3 -m pip install --no-index --no-deps /tmp/stack-wheels/repo_stack_timeline-1.0.0-py3-none-any.whl
 ```
 
+## Compare recorded lockfiles
+
+Add `--lockfiles` to analyze committed `package-lock.json` and
+`npm-shrinkwrap.json` v2/v3 alongside declarations. This opts into JSON schema 2;
+without the flag, schema 1 is preserved. Select **Recorded lockfile packages** in
+the viewer to inspect package locations, versions, integrity and metadata changes,
+including root records, nested installations, aliases and workspace links.
+Malformed or unsupported files produce explicit incomplete-analysis outcomes.
+
+```sh
+/tmp/stack-timeline-env/bin/repo-stack-timeline /path/to/repository \
+  0123456789ab fedcba987654 --lockfiles --output /tmp/my-lockfile-report
+```
+
+For a fully offline synthetic lockfile demo (including a deliberately unsupported
+snapshot), run `python3 scripts/lockfile_demo.py /tmp/stack-lockfile-demo`.
+
+Recorded state does not establish installation, usage, vulnerability status, or
+verified contents. See [frozen lockfile semantics and JSON v2](docs/lockfiles.md),
+[licensed fixtures](examples/lockfiles/README.md), and
+[one-command lockfile verification](docs/lockfile-verification.md).
+
 ## Supported scope
 
 | Format | Extracted declarations |
@@ -74,7 +97,8 @@ requirement strings remain available. npm constraints are opaque strings.
 
 These are **declared dependencies**, not installed versions, actual usage,
 transitive graphs, ecosystem popularity, or evidence of when a library was first
-adopted. Lockfiles, setup.py, backend execution, requirements.txt, Poetry-specific
+adopted. Without `--lockfiles`, lockfiles are excluded. setup.py, backend execution,
+requirements.txt, Poetry-specific
 dependencies, and dependency groups are outside this version's scope. Relevant
 unsupported and dynamic fields carry explicit notices. Two unreadable snapshots
 can have no comparable events; inspect coverage notices before interpreting
@@ -97,7 +121,7 @@ python3 scripts/verify.py --browser
 
 Verification never installs or downloads anything. It requires Linux
 `libseccomp.so.2` for the network-denied subprocess checks, and Node.js, Playwright
-1.51.1 plus its Chromium for `--browser`. For an existing external installation,
+1.58.2 plus its Chromium for `--browser`. For an existing external installation,
 set `PLAYWRIGHT_MODULE` to its absolute `playwright` package directory and
 `PLAYWRIGHT_BROWSERS_PATH` to its browser cache. Without browser tools,
 `python3 scripts/verify.py` runs all Python checks and benchmarks and explicitly
