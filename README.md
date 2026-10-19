@@ -12,6 +12,28 @@ changes, and unknown comparisons caused by malformed or dynamic metadata.
 Selections can cross branches, include merges, repeat commits, or run backwards.
 Commit timestamps are never interpreted as adoption dates.
 
+## Annual public-cohort report, 2019–2025
+
+Read the [aggregate findings](results/annual/report.md), or reproduce the
+self-contained interactive report from 56 annual samples (55 distinct source commits):
+
+```sh
+python3 scripts/annual_report.py --output /tmp/annual-trends
+# Open /tmp/annual-trends/index.html.
+```
+
+Eight public Python/JavaScript repositories are frozen prospectively. The report
+shows root runtime declaration prevalence, adoption, removal and persistence,
+yearly coverage denominators, source links, and a fixed-cohort sensitivity view.
+Six repositories are observable in every year; six early Python cells remain
+unknown rather than being counted as zero. These are bounded cohort findings,
+not GitHub-wide trends or actual technology usage. Original manifests, licenses,
+commit/tree objects, and hashes are included for offline reproduction.
+See [cohort, provenance and acquisition](examples/annual/README.md).
+
+Verify the study with `python3 scripts/verify_annual.py`. The annual reader's
+conservative legacy Python support is separate from the snapshot CLI below.
+
 ## Try it offline
 
 Requirements: **Linux, Python 3.11+, Git**. No third-party Python installation is

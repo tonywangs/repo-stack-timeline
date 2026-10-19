@@ -1,0 +1,104 @@
+{
+  "browser": "passed",
+  "publication_tree": {
+    "bytes": 1731333,
+    "files": 108
+  },
+  "schema": "annual-verification/1",
+  "sha256": {
+    "examples/annual/cohort.json": "39e14310f22290bf2ba4c8f13b657f8835dbc2892b4dd557db26bed4cb589c95",
+    "examples/annual/sources/chalk--chalk.json": "4a8611496c495d2ed66de32b3b217364ed5a87f5147140473197ebcc066f1f1c",
+    "examples/annual/sources/expressjs--express.json": "5f2369e6e6dcf22257aab7eac81011b742b1b61eb8de4524c6567700876abee6",
+    "examples/annual/sources/koajs--koa.json": "cef068c55dc97c3690be79fb6380e035bc7b627502ab23e7d047a4c6bb0a6db5",
+    "examples/annual/sources/pallets--click.json": "8b72798a08dbe149e14c406edbf053d85846855559542f505686aaf2f009a794",
+    "examples/annual/sources/pallets--flask.json": "391513c465d4cb4bd71d077c56311f1a1b8c175310713fd2d26cf79d359d4c28",
+    "examples/annual/sources/pallets--itsdangerous.json": "7be6f8ae54e5eaf7143f2f72887a0a910eb06acbee775d836a467ce96eed3a7b",
+    "examples/annual/sources/pallets--jinja.json": "4b0d889d040f7e8630f833f7d4da29fcb222d4b597c004c32c74af5c11bf076c",
+    "examples/annual/sources/tj--commander.js.json": "d5fd5595e71abd780e5b533245d52f0e19956aecd0d068a5aa9e5151f04d25ec",
+    "results/annual/SHA256SUMS": "46f8d21c57a138dd4658552ebbc4a8648c27e6b23ee196a14a46054511a12003",
+    "results/annual/index.html": "d78318fa702fe29c819eb0aad6f1dd0c1a93012fe6989920b34b4963b5fb1ed2",
+    "results/annual/report.json": "859b5c968e49b9f047cd6192ed187e5ae4f761f6fc867f27ab336172e4a4cb10",
+    "results/annual/report.md": "967e7623f56b4180e117bd96fbac5325ae476fc9d122a9aca5d73a453dfda3f1",
+    "scripts/acquire_annual.py": "d4ce87e1c89af6d5c10e466873a99ac6c710cfef51d87d0a86b1f0fd98527a2c",
+    "scripts/annual_report.py": "4944eb68e48c3dbaf7318ea252b2c3ccdba3b55dfa64285bc377fab1bfa8b1b2",
+    "scripts/verify_annual.py": "4ac01fc9335a58db9391e7bbedfb756b162b34bc71b863b34b04410d05e28016",
+    "src/repo_stack_timeline/annual.py": "078a08812483fda5d5d5a859c689b0202e2e5fba521fee252047c3c88807ce69",
+    "src/repo_stack_timeline/annual_report.py": "b4c145d35bda0806ec0ee0216c9a7551eed0a82ed5aea324fcf13b47056da77e",
+    "src/repo_stack_timeline/annual_viewer.html": "467eb0d216ea820d19e0e797d5636a3241e44523fb6e8a15ec3e7d18e3ae75c2",
+    "tests/annual_browser.cjs": "1455a4d5b2a43f0810d67f8f7131b102f5ddaea97e023a31413f76dc6d14ef07",
+    "tests/test_annual.py": "33c28b5c209333552d56ac9b85823730b68fa9d22d2faa6594276efde7fba3ca"
+  },
+  "started_at": "2026-10-19T05:40:23.200437+00:00",
+  "status": "passed",
+  "steps": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "scripts/offline_exec.py",
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "test_annual",
+        "test_extract",
+        "test_install",
+        "-v"
+      ],
+      "elapsed_seconds": 2.955259494949132,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "label": "Annual coverage/oracle/provenance plus shared parser and installation checks"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "scripts/offline_exec.py",
+        "/usr/bin/python3",
+        "scripts/annual_report.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.43870543222874403,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "label": "Frozen artifact reproduction"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "scripts/offline_exec.py",
+        "/usr/bin/python3",
+        "scripts/annual_report.py",
+        "--output",
+        "/tmp/annual-verify-m2bpd4p9/report"
+      ],
+      "elapsed_seconds": 0.4666380910202861,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "label": "Fresh one-command offline launch"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "scripts/offline_exec.py",
+        "/usr/bin/python3",
+        "scripts/annual_report.py",
+        "--output",
+        "/tmp/annual-verify-m2bpd4p9/report"
+      ],
+      "elapsed_seconds": 0.5890730898827314,
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "label": "Existing destination refusal"
+    },
+    {
+      "command": [
+        "node",
+        "tests/annual_browser.cjs",
+        "/tmp/annual-verify-m2bpd4p9/report/index.html"
+      ],
+      "elapsed_seconds": 4.322485917247832,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "label": "Offline browser use case"
+    }
+  ]
+}

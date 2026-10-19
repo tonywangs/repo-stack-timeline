@@ -1,0 +1,18 @@
+{
+  "schema": "annual-cohort/1",
+  "frozen_on": "2026-10-19",
+  "years": [2019, 2020, 2021, 2022, 2023, 2024, 2025],
+  "selection_rule": "Prospectively frozen before annual extraction: four established Pallets Python libraries and four established JavaScript server/CLI libraries, selected for small public Git histories, permissive licensing, and relevance to reusable application infrastructure. Purposeful convenience sample, not random. No substitution based on observed trends or coverage.",
+  "exclusions": "All repositories outside the eight named members; forks, applications, private repositories, transitive dependencies, development/build/optional/peer requirements, nested packages, and non-default-branch history. Unsupported historical metadata remains unknown, never a reason to replace a member.",
+  "sampling_rule": "Freeze the acquired default branch head. Walk its full first-parent chain in topology order; select the first commit with committer timestamp strictly before January 1 UTC of the following year. This is a retrospective branch-lineage sample, not a reconstruction of historical default branches. No eligible commit in a complete history is unavailable_history, not an empty declaration set.",
+  "repositories": [
+    {"repository": "pallets/flask", "ecosystem": "python", "license": "BSD-3-Clause"},
+    {"repository": "pallets/click", "ecosystem": "python", "license": "BSD-3-Clause"},
+    {"repository": "pallets/jinja", "ecosystem": "python", "license": "BSD-3-Clause"},
+    {"repository": "pallets/itsdangerous", "ecosystem": "python", "license": "BSD-3-Clause"},
+    {"repository": "expressjs/express", "ecosystem": "npm", "license": "MIT"},
+    {"repository": "koajs/koa", "ecosystem": "npm", "license": "MIT"},
+    {"repository": "chalk/chalk", "ecosystem": "npm", "license": "MIT"},
+    {"repository": "tj/commander.js", "ecosystem": "npm", "license": "MIT"}
+  ]
+}
