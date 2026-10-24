@@ -1,0 +1,32 @@
+{
+  "schema": "annual-cohort/1",
+  "frozen_on": "2026-10-24",
+  "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "selection_rule": "Prospectively frozen two-member application extension before annual extraction. Purposeful maximum-contrast cases: Node-RED visual event-driven programming and Etherpad collaborative document editing, from separate owner namespaces outside Pallets. Public primary repository descriptions inspected 2026-10-24. Chosen for end-user application purpose and JavaScript comparability with the existing library cohort, not observed dependency trajectories. This is a convenience case study, not a probability sample or an estimate of independent governance.",
+  "exclusions": "All repositories outside the two named members, private/deleted/inaccessible projects, nested manifests, dev/build/optional/peer dependencies, and other branch lineages. No replacements for missing metadata. Current application-purpose labels are selection strata, not historical category observations.",
+  "sampling_rule": "Freeze the acquired default branch head. Walk its full first-parent chain in topology order; select the first commit with committer timestamp strictly before January 1 UTC of the following year. This is a retrospective branch-lineage sample, not a reconstruction of historical default branches. No eligible commit in a complete history is unavailable_history, not an empty declaration set.",
+  "repositories": [
+    {
+      "repository": "node-red/node-red",
+      "ecosystem": "npm",
+      "license": "Apache-2.0",
+      "selection_stratum": "visual-programming-application",
+      "selection_source": "https://github.com/node-red/node-red"
+    },
+    {
+      "repository": "ether/etherpad",
+      "ecosystem": "npm",
+      "license": "Apache-2.0",
+      "selection_stratum": "collaborative-editing-application",
+      "selection_source": "https://github.com/ether/etherpad"
+    }
+  ]
+}

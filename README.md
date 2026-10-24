@@ -189,3 +189,11 @@ GitHub, ScanCode and Dependabot implementations. This project makes no novelty
 or comparative performance claim.
 
 MIT licensed. Vendored `packaging` and public fixtures retain their own licenses.
+
+### Application extension (research in progress)
+
+[Inspect the Node-RED/Etherpad annual findings](results/applications/report.md)
+or open `results/applications/index.html`. Reproduce with
+`python3 scripts/application_report.py --check`. These 14 public snapshots expose
+root-manifest coverage gaps; they do not establish GitHub-wide project-type trends.
+[Acquisition and limitations](examples/applications/README.md).

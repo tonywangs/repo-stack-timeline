@@ -109,8 +109,9 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--cache', type=Path, required=True)
     p.add_argument('--sources', type=Path, default=ROOT / 'examples/annual/sources')
+    p.add_argument('--cohort', type=Path, default=ROOT / 'examples/annual/cohort.json')
     args = p.parse_args()
-    acquire(args.cache.resolve(), args.sources.resolve(), json.loads((ROOT / 'examples/annual/cohort.json').read_text()))
+    acquire(args.cache.resolve(), args.sources.resolve(), json.loads(args.cohort.read_text()))
 
 if __name__ == '__main__':
     main()
