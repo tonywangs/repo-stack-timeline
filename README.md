@@ -31,6 +31,13 @@ not GitHub-wide trends or actual technology usage. Original manifests, licenses,
 commit/tree objects, and hashes are included for offline reproduction.
 See [cohort, provenance and acquisition](examples/annual/README.md).
 
+The [annual category appendix](results/categories/report.md) adds evidence-backed
+package-purpose labels and stack counts by category. Its exploratory rules detect
+no category changes in 48 comparable intervals; this fixed library cohort cannot
+measure GitHub-wide shifts in project types. Reproduce with
+`python3 scripts/category_report.py --output /tmp/annual-categories`, or verify
+checked-in results with `python3 scripts/category_report.py --check`.
+
 Verify the study with `python3 scripts/verify_annual.py`. The annual reader's
 conservative legacy Python support is separate from the snapshot CLI below.
 
